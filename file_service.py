@@ -4,5 +4,3 @@ def readFileByLines(path):
 	lines = [line.strip() for line in p]
 	p.close()
 	return lines
-
-dkslafja;fja;jfa;fj
