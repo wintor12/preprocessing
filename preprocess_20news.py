@@ -22,6 +22,7 @@ categories = [f for f in files if os.path.isdir(os.path.join(path, f)) and f!='t
 for category in categories:	
 	src = os.path.join(path, category)
 	docs = os.listdir(src)
+	docs = [doc for doc in docs if not doc.startswith('.')]  ##if we do not add this, then the number of documents doubled because each file name has '.name' hidden file in windows
 	num = len(docs)
 	num_train = math.floor(num * num_training_percentage)
 	num_test = num - num_train
