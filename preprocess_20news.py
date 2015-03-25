@@ -22,15 +22,16 @@ categories = [f for f in files if os.path.isdir(os.path.join(path, f)) and f!='t
 for category in categories:	
 	src = os.path.join(path, category)
 	docs = os.listdir(src)
-	docs = [doc for doc in docs if not doc.startswith('.')]  ##if we do not add this, then the number of documents doubled because each file name has '.name' hidden file in windows
-	num = len(docs) 
+	num = len(docs)
 	num_train = math.floor(num * num_training_percentage)
 	num_test = num - num_train
 	n = 0
 	for doc in docs:
 		if not doc.startswith('.') and os.path.isfile(os.path.join(src, doc)):
 			shutil.copy(os.path.join(src, doc), path_data)
+			n = n + 1
 			if n > num_train:
 				shutil.copy(os.path.join(src, doc), path_test)
 			else:
 				shutil.copy(os.path.join(src, doc), path_train)
+
