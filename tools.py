@@ -37,7 +37,7 @@ def keepEnglishWords(path, output):
 		p.close()
 
 
-path = '/Users/tongwang/Desktop/exp/lda/20news_test/data_words'
-output = '/Users/tongwang/Desktop/exp/lda/20news_test/data_words_clean'
-keepEnglishWords(path, output)
+# path = '/Users/tongwang/Desktop/exp/lda/20news_test/data_words'
+# output = '/Users/tongwang/Desktop/exp/lda/20news_test/data_words_clean'
+# keepEnglishWords(path, output)
 # print checkWord('Germany')
