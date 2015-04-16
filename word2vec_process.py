@@ -3,9 +3,9 @@ import numpy as np
 import gensim, logging
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
-save_path = 'C:\\Exp\\lda\\20news_test7\\word2vec_model'
-voc_path = 'C:\\Exp\\lda\\20news_test7\\idAndWord_2'
-matrix_path = 'C:\\Exp\\lda\\20news_test7\\sim_matrix'
+save_path = 'C:\\Exp\\lda\\20news\\word2vec_model'
+voc_path = 'C:\\Exp\\lda\\20news_test10\\idAndWord_50_1000'
+matrix_path = 'C:\\Exp\\lda\\20news_test10\\sim_matrix'
 
 if not os.path.exists(matrix_path):
 	os.makedirs(matrix_path)
